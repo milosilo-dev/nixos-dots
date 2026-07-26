@@ -14,6 +14,7 @@
      vscode
      btop
      upower
+     gh
 
      # Rusty stuff
      cargo
