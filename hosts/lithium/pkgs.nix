@@ -15,6 +15,10 @@
      btop
      upower
      gh
+     usbutils
+
+     # Touch ID
+     fprintd
 
      # Rusty stuff
      cargo

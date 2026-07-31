@@ -7,9 +7,8 @@
     # Latest stable release of nixpkgs
     nixpkgs-stable.url = "nixpkgs/nixos-26.05";
 
-    home-manager = {
-      url = "github:nix-community/home-manager/master";
-      # url = "github:nix-community/home-manager/release-25.05";
+    nixos-06cb-009a-fingerprint-sensor = {
+      url = "github:ahbnr/nixos-06cb-009a-fingerprint-sensor";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -18,7 +17,7 @@
     self,
     nixpkgs,
     nixpkgs-stable,
-    home-manager,
+    nixos-06cb-009a-fingerprint-sensor,
     ...
   } @ inputs:
   let
@@ -61,6 +60,7 @@
               inherit inputs system stablePkgs unstablePkgs;
               hostname = machineName;
               mainUser = machine.mainUser;
+              fingerprintSensor = nixos-06cb-009a-fingerprint-sensor;
             };
 
             modules =
