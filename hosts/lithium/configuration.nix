@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, stablePkgs, lib, hostname, mainUser, fingerprintSensor, ... }:
+{ inputs, config, pkgs, stablePkgs, lib, hostname, mainUser, ... }:
 
 {
   imports =
@@ -11,7 +11,6 @@
       ../../shared/sound.nix
       ../../shared/user.nix
       ../../shared/activate.nix
-      ../../shared/fprintd.nix
     ];
 
   boot.loader.systemd-boot.enable = true;

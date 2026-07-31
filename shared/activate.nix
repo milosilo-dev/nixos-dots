@@ -14,6 +14,10 @@ let
       local = ../config/fastfetch/config-pokemon.jsonc; 
       global = "/home/${mainUser}/.config/fastfetch/config-pokemon.jsonc"; 
     }
+    {
+      local = ../config/zsh/.zshrc;
+      global = "/home/${mainUser}/.zshrc";
+    }
   ];
 in {
   system.activationScripts.userConfigs.text =
