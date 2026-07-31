@@ -11,9 +11,14 @@
       ../../shared/sound.nix
       ../../shared/user.nix
       ../../shared/activate.nix
+      ../../shared/maintenance.nix
     ];
 
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot = {
+    enable = true;
+    configurationLimit = 2;
+  };
+
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = hostname;
