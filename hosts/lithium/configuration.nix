@@ -18,11 +18,12 @@
     enable = true;
     configurationLimit = 2;
   };
-
+  boot.loader.timeout = 1;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = hostname;
   networking.networkmanager.enable = true;
+  systemd.services.NetworkManager-wait-online.enable = false;
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
   

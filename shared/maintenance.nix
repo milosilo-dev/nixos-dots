@@ -3,6 +3,8 @@
     systemd.services.system-maintenance = {
         description = "NixOS system maintenance";
 
+        after = [ "multi-user.target" ];
+
         serviceConfig = {
             Type = "oneshot";
             ExecStart = "${pkgs.bash}/bin/bash ${../maintenance.sh}";
