@@ -23,8 +23,5 @@
      # Rusty stuff
      cargo
      rustup
-
-     # Ferrum vm
-     pkgsCross.i686-embedded.buildPackages.gcc
   ];
 }
