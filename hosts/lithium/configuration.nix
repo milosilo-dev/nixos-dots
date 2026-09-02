@@ -12,6 +12,7 @@
       ../../shared/user.nix
       ../../shared/activate.nix
       ../../shared/maintenance.nix
+      ../../shared/virt-manager.nix
     ];
 
   boot.loader.systemd-boot = {

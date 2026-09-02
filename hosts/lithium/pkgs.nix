@@ -16,6 +16,9 @@
      upower
      gh
      usbutils
+     nmap
+     orca-slicer
+     zed-editor
 
      # Touch ID
      fprintd
