@@ -20,6 +20,8 @@
      orca-slicer
      zed-editor
      gnome-control-center
+     gcc
+     opencode
      
      # Touch ID
      fprintd
