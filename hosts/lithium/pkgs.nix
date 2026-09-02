@@ -19,7 +19,8 @@
      nmap
      orca-slicer
      zed-editor
-
+     gnome-control-center
+     
      # Touch ID
      fprintd
 

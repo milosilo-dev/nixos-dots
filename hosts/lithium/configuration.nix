@@ -27,7 +27,10 @@
   systemd.services.NetworkManager-wait-online.enable = false;
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  
+
+  services.gnome.evolution-data-server.enable = true;
+  programs.dconf.enable = true;
+
   programs.niri.enable = true;
   services.printing.enable = true;
   services.upower.enable = true;
