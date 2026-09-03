@@ -6,12 +6,16 @@
 
     # Latest stable release of nixpkgs
     nixpkgs-stable.url = "nixpkgs/nixos-26.05";
+
+    # Plymouth theme
+    nixos-boot.url = "github:Melkor333/nixos-boot";
   };
 
   outputs = {
     self,
     nixpkgs,
     nixpkgs-stable,
+    nixos-boot,
     ...
   } @ inputs:
   let
@@ -57,7 +61,7 @@
             };
 
             modules =
-              [ machine.nixosConfig ]
+              [ nixos-boot.nixosModules.default machine.nixosConfig ]
               ++ machine.extraNixosModules;
           })
         machines;

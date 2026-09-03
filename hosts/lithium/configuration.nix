@@ -1,5 +1,9 @@
-{ inputs, config, pkgs, stablePkgs, lib, hostname, mainUser, ... }:
+{ inputs, config, pkgs, stablePkgs, lib, hostname, mainUser, nixos-boot, ... }:
 
+let
+  theme = "load_unload";
+  delay = "4";
+in
 {
   imports =
     [
@@ -13,13 +17,22 @@
       ../../shared/activate.nix
       ../../shared/maintenance.nix
       ../../shared/virt-manager.nix
+      ../../shared/hyprlock.nix
     ];
+
+  nixos-boot = {
+    enable  = true;
+  };
+
+  boot.plymouth = {
+    enable = true;
+    theme = theme;
+  };
 
   boot.loader.systemd-boot = {
     enable = true;
     configurationLimit = 2;
   };
-  boot.loader.timeout = 1;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = hostname;
@@ -27,6 +40,11 @@
   systemd.services.NetworkManager-wait-online.enable = false;
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
+
+  boot.kernelParams = [ "pm_print_times=1" "pm_debug_messages=1" ];
+  boot.blacklistedKernelModules = [
+    "cdc_mbim" "cdc_ncm" "cdc_wdm" "cdc_acm" "cdc_ether" "usbnet" "qrtr"
+  ];
 
   services.gnome.evolution-data-server.enable = true;
   programs.dconf.enable = true;

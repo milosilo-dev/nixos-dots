@@ -10,6 +10,10 @@ let
       local = ../config/fastfetch/config.jsonc; 
       global = "/home/${mainUser}/.config/fastfetch/config.jsonc"; 
     }
+    {
+      local = ../config/hyprlock/hyprlock.conf;
+      global = "/home/${mainUser}/.config/hypr/hyprlock.conf";
+    }
     { 
       local = ../config/fastfetch/config-pokemon.jsonc; 
       global = "/home/${mainUser}/.config/fastfetch/config-pokemon.jsonc"; 
