@@ -22,6 +22,7 @@
      gnome-control-center
      gcc
      opencode
+     file
      
      # Touch ID
      fprintd
@@ -29,5 +30,7 @@
      # Rusty stuff
      cargo
      rustup
+
+     proton-vpn
   ];
 }
