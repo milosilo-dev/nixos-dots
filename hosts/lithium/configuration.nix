@@ -67,6 +67,8 @@ in
   services.printing.enable = true;
   services.upower.enable = true;
   services.dbus.enable = true;
+  programs.nix-ld.enable = true;
+  services.mullvad-vpn.package = pkgs.mullvad-vpn;
 
   xdg.portal = {
     enable = true;

@@ -20,6 +20,8 @@
      orca-slicer
      zed-editor
      gnome-control-center
+     prismlauncher
+     xwayland-satellite
      gcc
      opencode
      file
