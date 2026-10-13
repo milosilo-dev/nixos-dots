@@ -18,6 +18,7 @@ in
       ../../shared/maintenance.nix
       ../../shared/virt-manager.nix
       ../../shared/hyprlock.nix
+      ../../shared/logisim.nix
     ];
 
   nixos-boot = {

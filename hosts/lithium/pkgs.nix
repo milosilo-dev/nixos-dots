@@ -25,7 +25,7 @@
      gcc
      opencode
      file
-     
+
      # Touch ID
      fprintd
 
