@@ -10,6 +10,7 @@
      fastfetch
      pokemon-colorscripts
      fzf
+     libreoffice
      evtest
      vscode
      btop
@@ -25,6 +26,7 @@
      gcc
      opencode
      file
+     just
 
      # Touch ID
      fprintd
@@ -34,5 +36,6 @@
      rustup
 
      proton-vpn
+     obsidian
   ];
 }

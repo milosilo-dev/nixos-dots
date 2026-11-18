@@ -25,11 +25,6 @@ in
     enable  = true;
   };
 
-  boot.plymouth = {
-    enable = true;
-    theme = theme;
-  };
-
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
